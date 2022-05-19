@@ -36,7 +36,7 @@ module.exports = {
         if (!cmd) return;
 		
         let teag = new discord.MessageEmbed()
-        .setColor(RANDOM)
+        .setColor("RANDOM")
         .setDescription(`<:happy:952327066223771668>  | Hey **${message.author.tag}**, Mi prefix en este server: \`${prefix}\``)
         if (message.content === `<@!${client.user.id}>` || message.content === `<@${client.user.id}>`)
         return message.channel.send({ embeds: [teag] })
