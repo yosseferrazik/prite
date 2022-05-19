@@ -34,6 +34,13 @@ module.exports = {
         if (!command) return
         const cmd = client.commands.get(command) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(command));
         if (!cmd) return;
+		
+        let teag = new discord.MessageEmbed()
+        .setColor(RANDOM)
+        .setDescription(`<:happy:952327066223771668>  | Hey **${message.author.tag}**, Mi prefix en este server: \`${prefix}\``)
+        if (message.content === `<@!${client.user.id}>` || message.content === `<@${client.user.id}>`)
+        return message.channel.send({ embeds: [teag] })
+		
         try {
 
             if (cmd.owner && message.author.id !== client.config.ownerID) {
