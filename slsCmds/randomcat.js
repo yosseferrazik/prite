@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageEmbed } = require('discord.js');
-const fetch = require('node-fetch');
+const axios = require('axios');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -9,19 +9,20 @@ module.exports = {
     async execute(interaction, client, args) {
 
 
-    await interaction.deferReply();
-		const { file } = await fetch('https://aws.random.cat/meow').then(response => response.json());
-    const gato = new MessageEmbed()
+        const url = 'https://aws.random.cat/meow';
+        let image;
 
-    .setColor('RANDOM')
-    .setTitle(`Que adorable :3`)
-    .setImage(file);
-         
-      
-      
-  
-		interaction.editReply({ embeds: [gato] });
-      
-      
+        const { data } = await axios.get(url);
+        image = data.image;
+        const embed = new MessageEmbed()
+            .setImage(image);
+        await interaction.followUp({ embeds: [embed] });
+
+
+
+
+        interaction.editReply({ embeds: [gato] });
+
+
     }
 };
