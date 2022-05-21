@@ -4,7 +4,6 @@ const { Routes } = require('discord-api-types/v9');
 
 module.exports = (client) => {
   const cmds = fs.readdirSync("./slsCmds/").filter(f => f.split(".").pop() === "js");
-
   const commands = [];
 
   for (const file of cmds) {
@@ -12,6 +11,23 @@ module.exports = (client) => {
       commands.push(command.data.toJSON());
       client.slsCommands.set(command.data.name, command);
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
   client.once('ready', () => {
 

@@ -9,19 +9,19 @@ module.exports = {
     async execute(interaction, client, args) {
 
 
-    await interaction.deferReply();
-		const { url } = await fetch('https://random.dog/woof.json').then(response => response.json());
-    const perro = new MessageEmbed()
+        await interaction.deferReply();
+        const { url } = await fetch('https://random.dog/woof.json').then(response => response.json());
+        const perro = new MessageEmbed()
 
-    .setColor('RANDOM')
-    .setTitle(`Que adorable :3`)
-    .setImage(url);
-         
-      
-      
-  
-		interaction.editReply({ embeds: [perro] });
-      
-      
+            .setColor('RANDOM')
+            .setTitle(`Que adorable :3`)
+            .setImage(url);
+
+
+
+
+        interaction.editReply({ embeds: [perro] });
+
+
     }
 };

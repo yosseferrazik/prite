@@ -5,7 +5,7 @@ module.exports = {
     name: "ban",
     aliases: ["prohibir"],
     description: "Condena a cadena perpetua a un miembro , con este comando conseguiras expulsar a un miembro para siempre",
-    category: "admin",
+    category: "moderacion",
     cooldown: 5,
     syntax:"ban {usuario}[razon]",
     permissions: ["BAN_MEMBERS"], 
@@ -36,9 +36,7 @@ module.exports = {
         .reply({
           content: `:anger: | ${member} Fue baneado`,
         })
-        .then((msg) => {
-          setTimeout(() => msg.delete(), 5000);
-        })
+
     );
       } catch(err) {
         message.reply(`awww a pasado algo inesperado -> ${err}`)

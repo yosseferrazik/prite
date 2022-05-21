@@ -5,7 +5,7 @@ module.exports = {
     name: "kick",
     aliases: ["expulsar"],
     description: "Expulsa a un miembro , este podra volver con una nueva invitacion",
-    category: "admin",
+    category: "moderacion",
     cooldown: 5,
     syntax: "kick {usuario}[razon]",
     permissions: ["KICK_MEMBERS"],
@@ -36,9 +36,7 @@ module.exports = {
                     .reply({
                         content: `:anger: | ${member} Fue expulsado`,
                     })
-                    .then((msg) => {
-                        setTimeout(() => msg.delete(), 20000);
-                    })
+
             );
         } catch (err) {
             message.reply(`awww a pasado algo inesperado -> ${err}`)

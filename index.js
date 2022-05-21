@@ -11,6 +11,8 @@ const fetch = require('node-fetch');
 const mongoose = require("mongoose");
 
 const client = new Client({ 
+      messageCacheLifetime: 60,
+
     restTimeOffset: 0,
     restWsBridgetimeout: 100,
     intents: 98045,
