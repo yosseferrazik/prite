@@ -1,6 +1,6 @@
 
  {
-  "mongo": "mongodb+srv://prite:prite@pritedata.enrh6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "mongo": "mongodb+srv://khanesska:khanesska@prite.i4s6r.mongodb.net/?retryWrites=true&w=majority",
   "prefix": "-",
   "slashGlobal": true,
   "testGuildID": "951865800103428136",
