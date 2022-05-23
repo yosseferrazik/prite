@@ -22,6 +22,7 @@ module.exports = {
 
 
 
+
         if (args[0] === "On" || args[0] === "on") {
             const data = await model.findOne({
                 GuildID: message.guild.id,
@@ -39,7 +40,7 @@ module.exports = {
                 });
                 newData.save();
             } else if (!data) {
-                message.channel.send(`Barrera antilinks desactivada`);
+                message.channel.send(`Barrera antilinks activa`);
 
                 let newData = new model({
                     GuildID: message.guild.id,
@@ -60,6 +61,6 @@ module.exports = {
             } else if (!data2) {
                 return message.channel.send(`No estaba activada`);
             }
+        } 
         }
     }
-}

@@ -76,7 +76,7 @@ process.on('uncaughtException', error => {
 
 
 app.get("/", (request, response) => {
-  console.log(`Estamos en la nube`);
+    client.logger.log(`> ☁️  • Estamos en la nube `, "success");
   response.sendStatus(200);
 });
 app.listen(process.env.PORT);

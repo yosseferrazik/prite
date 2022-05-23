@@ -11,7 +11,7 @@ const { Client, Message, MessageEmbed } = require("discord.js")
 module.exports = {
     name: "stats",
     description: "Te proporciona la informacion del bot",
-    category: "info",
+    category: "informacion",
     aliases: ["stats"],
     cooldown: 5,
     syntax: "stats",

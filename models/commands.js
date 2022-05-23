@@ -1,12 +1,12 @@
 const { Schema, model } = require("mongoose");
 
 const schema = new Schema({
-  GuildID: {
+GuildID: {
     type: String,
   },
-  cmds: {
-    type: Array,
-  },
+   cmds: {
+     type: Array,
+   },
 });
 
 module.exports = model("commands", schema);

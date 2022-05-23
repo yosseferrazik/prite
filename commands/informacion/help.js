@@ -9,7 +9,7 @@ Never gonna make you cry
 Never gonna say goodbye
 Never gonna tell a lie and hurt you`,
     aliases: ["h"],
-    category: "info",
+    category: "informacion",
     syntax: "help [nombre del comando]",
     cooldown: 5,
     permissions: ["SEND_MESSAGES"],
