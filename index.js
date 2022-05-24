@@ -1,9 +1,7 @@
 const config = require(`./settings/config.json`);
 const { Client, Intents, Collection } = require('discord.js');
 const colors = require("colors")
-const Enmap = require("enmap")
 const discord = require('discord.js')
-const { Player } = require('discord-player');
 const express = require("express");
 const app = express();
 const http = require("http"); 

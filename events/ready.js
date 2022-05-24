@@ -6,7 +6,7 @@ module.exports = {
 	name: 'ready',
 	async execute(client, message) {
         
-    let activities = [`${config.prefix}help `, "the big bang theory", "F·R·I·E·N·D·S", "servers"];
+    let activities = [`${config.prefix}help | @Prite `, "Hi \(o_o)/", ` ${config.prefix}help ⊙_⊙ `, "si te portas bien"];
     
     
     setInterval(() => {

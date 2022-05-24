@@ -37,7 +37,7 @@ module.exports = {
 
 
         //Prefix personalizado
-        
+
         let storedSettings = await GuildSettings.findOne({
             GuildID: message.guild.id,
         });
@@ -52,7 +52,11 @@ module.exports = {
         }
         const prefix = storedSettings.Prefix;
 
-
+        if (message.content === `<@!${client.user.id}>` || message.content === `<@${client.user.id}>`) {
+            return message.channel.send(
+                `¡ Hola **${message.author.tag}** ! Mi prefix en este servidor es **${prefix}** `
+            );
+        }
 
         // General
 
