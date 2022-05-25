@@ -1,4 +1,5 @@
 const { MessageEmbed, Client, Message, MessageActionRow, MessageButton } = require("discord.js");
+const config = require('../../settings/config.json');
 
 module.exports = {
     name: "help",
@@ -36,7 +37,7 @@ Never gonna tell a lie and hurt you`,
                     .setTitle(`❓ Ayuda`)
                     .setThumbnail(client.user.displayAvatarURL())
                     .setFooter('<Requerido> y [optional]')
-                    .setColor("RANDOM")
+                    .setColor(`${config.color}`)
                 if (cmd) {
                     help.addField(`*Nombre*`, `\`${cmd.name}\``)
                 }
@@ -56,11 +57,11 @@ Never gonna tell a lie and hurt you`,
 
             } else if (!args[0]) {
                 const embed = new MessageEmbed()
-                    .setColor('RANDOM')
+                    .setColor(`${config.color}`)
                     .setTitle('❓ Ayuda')
                     .setDescription("Usa `help [nombre de un comando]` para ver la informacion de un comando en especifico")
                     .setThumbnail(client.user.displayAvatarURL())
-                    .setImage("https://media.discordapp.net/attachments/950435266139660348/955761792716521552/Screenshot_2022-03-22_10.34.54.png")
+                    .setImage("https://i.imgur.com/5S7zAR7.png")
                     .setTimestamp()
                     .setFooter('<Importante> y [optional]');
 

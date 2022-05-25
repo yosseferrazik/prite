@@ -1,8 +1,9 @@
 
  {
   "mongo": "mongodb+srv://khanesska:khanesska@prite.i4s6r.mongodb.net/?retryWrites=true&w=majority",
-  "prefix": "-",
+  "prefix": "p.",
   "slashGlobal": true,
   "testGuildID": "951865800103428136",
-  "ownerID": "898444313049042974"
+  "ownerID": "898444313049042974" ,
+   "color":"#795548"
 }
