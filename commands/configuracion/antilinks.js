@@ -6,7 +6,7 @@ module.exports = {
     name: "antilinks",
     description: "¿ Te molestan los links ?¡ Usame !",
     category: "configuracion",
-    aliases: ["links"],
+    aliases: ["links", "link"],
     cooldown: 5,
     syntax: "antilinks <on|off>",
     permissions: ["SEND_MESSAGES"],
@@ -20,7 +20,9 @@ module.exports = {
          */
 
 
-
+if(!args[0]) {
+    message.channel.send(`Hm... elije On o Off `)
+}
 
 
         if (args[0] === "On" || args[0] === "on") {

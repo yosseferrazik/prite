@@ -9,19 +9,18 @@ module.exports = {
     async execute(interaction, client, args) {
 
 
-        const url = 'https://aws.random.cat/meow';
-        let image;
+            const url = 'https://no-api-key.com/api/v1/animals/cat';
+            let image;
 
-        const { data } = await axios.get(url);
-        image = data.image;
-        const embed = new MessageEmbed()
-            .setImage(image);
-        await interaction.followUp({ embeds: [embed] });
-
-
-
-
-        interaction.editReply({ embeds: [gato] });
+            try {
+                const { data } = await axios.get(url);
+                image = data.image;
+                const embed = new MessageEmbed()
+                .setImage(image);
+                await interaction.followUp({ embeds: [embed] });
+            } catch(err) {
+                console.log(err.stack);
+            }
 
 
     }

@@ -24,7 +24,7 @@ const client = new Client({
             sweepInterval: 300,
             sweepFilter: discord.Sweepers.filterByLifetime({
                 lifetime: 60,
-
+                getComparisonTimestamp: m => m.editedTimestamp ?? m.createdTimestamp,
             })
         }
     },
@@ -47,6 +47,7 @@ mongoose.connect(config.mongo, {
 module.exports = client;
 client.logger = require('./utils/logger');
 client.config = config;
+client.cooldowns = new Collection();
 client.commands = new Collection();
 client.slsCommands = new Collection();
 client.categories = require("fs").readdirSync(`./commands`);

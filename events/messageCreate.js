@@ -1,9 +1,8 @@
 const fs = require("fs");
 const config = require(`../settings/config.json`);
-const { Client, Message, MessageEmbed } = require("discord.js")
+const { Client, Message, MessageEmbed, Collection } = require("discord.js")
 const discord = require("discord.js")
 const GuildSettings = require("../models/settings.js")
-const GuildCommands = require("../models/commands.js");
 const antilinkData = require("../models/antilinks.js");
 const Discord = require("discord.js");
 
@@ -71,6 +70,30 @@ module.exports = {
 
 
 
+
+
+
+        if (!client.cooldowns.has(cmd.name)) {
+            client.cooldowns.set(cmd.name, new discord.Collection());
+        }
+        let now = Date.now();
+        let timeStamp = client.cooldowns.get(cmd.name) || new Collection();
+        let cool = cmd.cooldown || 5;
+        let userCool = timeStamp.get(message.author.id) || 0;
+        let estimated = userCool + cool * 1000 - now;
+
+        if (userCool && estimated > 0) {
+            let cool = new discord.MessageEmbed()
+                .setDescription(`Porfavor espera ${(estimated / 1000).toFixed()}s para volver a usar ${cmd.name} .`)
+            return (await message.reply({ embeds: [cool] })
+                .then(msg => { setTimeout(() => msg.delete().catch(() => null), estimated) })
+            )
+        }
+
+        timeStamp.set(message.author.id, now);
+        client.cooldowns.set(cmd.name, timeStamp);
+
+
         try {
 
             if (cmd.owner && message.author.id !== client.config.ownerID) {
@@ -93,28 +116,10 @@ module.exports = {
                 })
             }
 
-            let check = await GuildCommands.findOne({ GuildID: message.guild.id, })
 
-            if (check && check.cmds && check.cmds.includes(cmd.name)) {
-                message.channel.send("Comando deshabilitado")
-            } else {
-                cmd.run(client, message, args);
+            if (cmd) {
+                await cmd.run(client, message, args);
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         } catch (error) {
             console.log("ERROR: " + error)
