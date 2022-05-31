@@ -3,9 +3,9 @@
     "events/messageCreate.js": [
       {
         "id": "534973b8-672e-4e14-8d58-88e8aa7c13ea",
-        "line": 118,
-        "version": 477,
-        "index": 4178
+        "line": 115,
+        "version": 577,
+        "index": 4196
       }
     ]
   }

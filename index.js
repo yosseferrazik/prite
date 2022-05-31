@@ -45,12 +45,12 @@ mongoose.connect(process.env.MONGO, {
 
 
 module.exports = client;
-client.logger = require('./utils/logger');
+client.logger = require('./settings/logger');
 client.config = config;
 client.cooldowns = new Collection();
 client.commands = new Collection();
 client.slsCommands = new Collection();
-client.categories = require("fs").readdirSync(`./commands`);
+client.categories = require("fs").readdirSync(`./commands/message`);
 ["eventHandler", "commandHandler", "slsCmdHandler"]
     .filter(Boolean)
     .forEach(h => {

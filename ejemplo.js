@@ -1,5 +1,4 @@
 const { Client, Message, MessageEmbed, discord } = require("discord.js")
-const config = require("./settings/config.json")
 
 module.exports = {
     name: "",
@@ -7,6 +6,9 @@ module.exports = {
     category: "",
     aliases: [""],
     syntax: "",
+    cooldown:"",
+    owner:"",
+    permissions:[""],
     run: async (client, message, args) => {
 
 

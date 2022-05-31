@@ -1,11 +1,12 @@
 const { MessageEmbed, Client, Message } = require("discord.js")
-const GuildSettings = require("../../models/settings.js")
+const GuildSettings = require("../../../models/settings.js")
 
 module.exports = {
     name: "prefix",
     description: "Cambia el prefix del bot",
     category: "configuracion",
     syntax: "prefix <nuevo prefix>",
+    cooldown: 10,
     aliases: "setprefix",
     permissions: ["ADMINISTRATOR"],
 
@@ -15,8 +16,8 @@ module.exports = {
 	 */
 
     run: async (client, message, args) => {
-        if (!args[0]) return message.channel.send("¿ Y el prefix ?")
-        if (args[0].length > 5) return message.channel.send("El prefix no debe ser mayor a 5 caracteres")
+        if (!args[0]) return message.channel.send("<:bien:977661657050415174> ¿ Y el prefix ?")
+        if (args[0].length > 5) return message.channel.send("<:bien:977661657050415174> El prefix no debe ser mayor a 5 caracteres")
 
         try {
 
@@ -35,7 +36,7 @@ module.exports = {
                 console.log(e);
             });
 
-            message.channel.send(`Prefix cambiado a **${args[0]}**`)
+            message.channel.send(`<:bien:977661657050415174> Prefix cambiado a **${args[0]}**`)
 
         } catch (error) {
             message.channel.send("<:mal:977661656937168926> Uy , paso algo inesperado");

@@ -84,7 +84,7 @@ module.exports = {
 
         if (userCool && estimated > 0) {
             let cool = new discord.MessageEmbed()
-                .setDescription(`Porfavor espera ${(estimated / 1000).toFixed()}s para volver a usar ${cmd.name} .`)
+                .setDescription(`<:mal:977661656937168926> Porfavor espera ${(estimated / 1000).toFixed()}s para volver a usar ${cmd.name} .`)
             return (await message.reply({ embeds: [cool] })
                 .then(msg => { setTimeout(() => msg.delete().catch(() => null), estimated) })
             )
@@ -100,8 +100,7 @@ module.exports = {
                 return message.reply({
                     embeds: [new Discord.MessageEmbed()
                         .setColor("RED")
-                        .setFooter("ERROR")
-                        .setTitle("No puedes ejecutar este comando")
+                        .setTitle("<:mal:977661656937168926> No puedes ejecutar este comando")
                         .setDescription("Deberias ser owner para ejecutar este comando")]
                 })
             }
@@ -110,9 +109,8 @@ module.exports = {
                 return message.reply({
                     embeds: [new Discord.MessageEmbed()
                         .setColor("RED")
-                        .setFooter("ERROR")
-                        .setTitle("No puedes ejecutar este comando")
-                        .setDescription("No tienes suficientes permisos")]
+                        .setTitle("<:mal:977661656937168926> No puedes ejecutar este comando")
+                        .setDescription(`Necesitas **${cmd.permissions}** para ejecutar este comando`)]
                 })
             }
 

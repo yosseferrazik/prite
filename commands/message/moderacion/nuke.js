@@ -1,5 +1,3 @@
-
-// COMMAND 
 const { Client, Message, MessageEmbed, Discord } = require("discord.js")
 
 module.exports = {

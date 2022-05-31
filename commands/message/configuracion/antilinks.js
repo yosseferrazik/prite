@@ -1,5 +1,5 @@
 const { Client, Message, MessageEmbed } = require("discord.js");
-const model = require("../../models/antilinks.js");
+const model = require("../../../models/antilinks.js");
 const mongoose = require("mongoose")
 
 module.exports = {

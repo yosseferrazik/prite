@@ -1,11 +1,11 @@
 const discord = require('discord.js');
-const config = require('../../settings/config.json');
+const config = require('../../../settings/config.json');
 const timezone = require("moment-timezone");
 const moment = require("moment");
 require("moment-duration-format");
 const ms = require("ms");
 const os = require("node:os");
-const packageJson = require("../../package.json");
+const packageJson = require("../../../package.json");
 const { Client, Message, MessageEmbed } = require("discord.js")
 
 module.exports = {

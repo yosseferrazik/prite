@@ -10,11 +10,11 @@ module.exports = (client) => {
 
     const commands = [];
 
-    readdirSync("./slsCmds/").forEach((dir) => {
-        const slashCommandFile = readdirSync(`./slsCmds/${dir}/`).filter((files) => files.endsWith(".js"));
+    readdirSync("./commands/slash/").forEach((dir) => {
+        const slashCommandFile = readdirSync(`./commands/slash/${dir}/`).filter((files) => files.endsWith(".js"));
 
         for (const file of slashCommandFile) {
-            const slashCommand = require(`../slsCmds/${dir}/${file}`);
+            const slashCommand = require(`../commands/slash/${dir}/${file}`);
 
             commands.push(slashCommand.data.toJSON());
             client.slsCommands.set(slashCommand.data.name, slashCommand);
