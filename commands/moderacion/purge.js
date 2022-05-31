@@ -22,15 +22,15 @@ module.exports = {
         try {
 
             if (!input) {
-                return message.channel.send({ content: "Inserta un numero" })
+                return message.channel.send({ content: "<:mal:977661656937168926> Inserta un numero" })
             }
 
             if (isNaN(input)) {
-                return message.channel.send({ content: 'Formato invalido' })
+                return message.channel.send({ content: '<:mal:977661656937168926> Formato invalido' })
             }
 
             if (input < 0) {
-                return message.channel.send({ content: 'Dame un numero positivo' })
+                return message.channel.send({ content: '<:mal:977661656937168926> Dame un numero positivo' })
 
             }
 
@@ -45,7 +45,7 @@ module.exports = {
             })
 
         } catch (err) {
-            message.reply(`awww a pasado algo inesperado -> ${err}`)
+            message.reply(`<:mal:977661656937168926> awww a pasado algo inesperado -> ${err}`)
         }
 
 

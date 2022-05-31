@@ -116,7 +116,6 @@ module.exports = {
                 })
             }
 
-
             if (cmd) {
                 await cmd.run(client, message, args);
             }

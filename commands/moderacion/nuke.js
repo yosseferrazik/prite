@@ -16,9 +16,7 @@ module.exports = {
 
 
 
-        if (!message.member.permissions.has("MANAGE_CHANNELS")) {
-            return message.reply({ content: "No tienes permisos suficientes" })
-        }
+
 
 
 

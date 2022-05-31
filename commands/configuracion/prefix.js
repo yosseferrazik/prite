@@ -35,16 +35,10 @@ module.exports = {
                 console.log(e);
             });
 
-            message.channel.send({
-                embeds: [new MessageEmbed()
-                    .setTitle("Prefix cambiado exitosamente")
-                    .setDescription(`Se cambio el prefix a : **${args[0]}**`)
-                    .setColor("RANDOM")
-                    .setFooter("Aprendi a usar MongoDB con este comando xD GG EZ")]
-            })
+            message.channel.send(`Prefix cambiado a **${args[0]}**`)
 
         } catch (error) {
-            message.channel.send("Some Error Occured");
+            message.channel.send("<:mal:977661656937168926> Uy , paso algo inesperado");
             console.log("ERROR :: " + error)
         }
 

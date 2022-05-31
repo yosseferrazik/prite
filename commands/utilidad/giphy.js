@@ -13,7 +13,7 @@ module.exports = {
 
 
         if (args.length === 0) {
-            message.channel.send("¿Y el gif?");
+            message.channel.send("<:mal:977661656937168926> ¿Y el gif?");
             return;
         }
         if (args.length === 1) {

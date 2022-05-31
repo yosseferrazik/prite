@@ -11,7 +11,7 @@ module.exports = {
         run: async (bot, message, args) => {
           
         const comment = args.join('');
-        if(!comment) return message.channel.send(`¿Y el comentario?`)
+        if(!comment) return message.channel.send(`<:mal:977661656937168926> ¿Y el comentario?`)
         try {    
           
           
@@ -24,7 +24,7 @@ module.exports = {
     }catch(err) {
       
         const embed2 = new Discord.MessageEmbed()
-              .setTitle(`Hm a pasado algo inesperado .`)
+              .setTitle(`<:mal:977661656937168926> Hm a pasado algo inesperado .`)
         message.channel.send({embeds: [embed2]});
     }
 

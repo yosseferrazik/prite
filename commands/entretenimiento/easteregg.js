@@ -8,7 +8,7 @@ module.exports = {
     aliases: ["egg"],
     cooldown: 5,
     syntax: "easteregg",
-    permissions: ["ADMINISTRATOR"],
+    permissions: [""],
     owner: false,
     run: async (client, message, args) => {
         

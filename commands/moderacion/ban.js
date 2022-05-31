@@ -16,30 +16,30 @@ module.exports = {
     const member = message.mentions.members.first();
 
 
-    if (!args[0]) return message.reply(`¿ A quien quieres banear ?`);
+    if (!args[0]) return message.reply(`<:mal:977661656937168926> ¿ A quien quieres banear ?`);
 
-    if (!member) return message.reply(`No logro encontrar al usuario que buscas`);
+    if (!member) return message.reply(`<:mal:977661656937168926> No logro encontrar al usuario que buscas`);
 
     if (member.id === message.author.id)
-      return message.reply(`No te puedes banear`);
+      return message.reply(`<:mal:977661656937168926> No te puedes banear`);
 
     if (message.member.roles.highest.position < member.roles.highest.position)
       return message.reply(
-        `No puedes banear a quien tiene un rol mas alto que el tuyo...`
+        `<:mal:977661656937168926> No puedes banear a quien tiene un rol mas alto que el tuyo...`
       );
 
-    if (!member.bannable) return message.reply(`No puedo banear a este usuario`);
+    if (!member.bannable) return message.reply(`<:mal:977661656937168926> No puedo banear a este usuario`);
 
     return (
       (await member.ban()) +
       message
         .reply({
-          content: `:anger: | ${member} Fue baneado`,
+          content: `<:martillo:977666678932508734> ${member} Fue baneado`,
         })
 
     );
       } catch(err) {
-        message.reply(`awww a pasado algo inesperado -> ${err}`)
+        message.reply(`<:mal:977661656937168926> awww a pasado algo inesperado -> ${err}`)
       }
     }
 };

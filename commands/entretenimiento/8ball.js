@@ -18,22 +18,13 @@ module.exports = {
         let pregunta = (args[0]);
         if (!pregunta) {
             return message.channel.send({
-                content: "¿ Y la pregunta ?"
+                content: "<:mal:977661656937168926> ¿ Y la pregunta ?"
             });
         }
 
-        const embed = new Discord.MessageEmbed()
-            .setTitle('8Ball dice...')
-            .setDescription(`${rand}`)
-            .setFooter('8Ball')
-            .setColor('RANDOM')
-            .setFooter("Me pican los cocos")
 
-        await message.channel.send({
 
-            embeds: [embed]
-
-        });
+        await message.channel.send(`<:8ball:981081849377992714> ${rand}`);
 
 
 

@@ -11,7 +11,7 @@ const { Client, Message, MessageEmbed } = require("discord.js")
 module.exports = {
     name: "stats",
     description: "Te proporciona la informacion del bot",
-    category: "informacion",
+    category: "bot",
     aliases: ["stats"],
     cooldown: 5,
     syntax: "stats",
@@ -20,18 +20,13 @@ module.exports = {
 
 
 
-        if (!message.guild.me.permissions.has("EMBED_LINKS")) return message.channel.send({
-            content: "No tengo permisos suficientes."
-        });
+
 
         try {
             const duration = moment.duration(client.uptime).format("**D[D], H[H], m[M], s[S]**");
 
-            const embed = new discord.MessageEmbed()
-                .setTitle(`⚙ • System Statistics`)
-                .setThumbnail(client.user.displayAvatarURL())
-                .setColor(config.color)
-                .setDescription(`
+
+            message.channel.send(`
 \`\`\`asciidoc
 • Platform - Arch     :: ${process.platform} - ${process.arch}
 • Bot Uptime          :: ${duration}
@@ -42,8 +37,7 @@ module.exports = {
 • Bot Version         :: v${packageJson.version}
 \`\`\`
             `)
-                .setFooter(`Pedido por ${message.author.username}`)
-            message.channel.send({ embeds: [embed] })
+
         } catch (e) {
             const embed = new discord.MessageEmbed()
                 .setDescription(`${e}`)

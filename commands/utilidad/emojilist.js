@@ -11,10 +11,7 @@ module.exports = {
     owner: true, 
       run: async (client, message, args) => {
         
-   if (!message.member.permissions.has('MANAGE_EMOJIS')) {
-      return message.channel
-        .send({content:"Te faltan los permisos :`manage_emojis` "});
-    }
+
         
      const emojiList = message.guild.emojis.cache.map((e, x) => `${x} = ${e} | ${e.name}`).join("\n");
       

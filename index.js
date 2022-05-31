@@ -34,7 +34,7 @@ const client = new Client({
 });
 
 
-mongoose.connect(config.mongo, {
+mongoose.connect(process.env.MONGO, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => {

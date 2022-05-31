@@ -11,7 +11,7 @@ module.exports = {
 
         const msg = args.join(" ");
         if (!msg) {
-            return message.channel.send("¿Que quieres que diga?");
+            return message.channel.send("<:mal:977661656937168926> ¿El gato dira... Nada?");
         }
         message.channel.send({
             files: [

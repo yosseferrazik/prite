@@ -15,7 +15,7 @@ module.exports = {
         const text = args.slice().join(' ');
 		if (!text) {
 			return message.channel.send(
-				'Dame un texto',
+				'<:mal:977661656937168926> Dame un texto',
 			);
 		}
 
@@ -26,7 +26,7 @@ module.exports = {
 			response = await fetch(url).then(res => res.json());
 		}
 		catch (e) {
-			return message.channel.send('A ocurrido algo inesperado');
+			return message.channel.send('<:mal:977661656937168926> A ocurrido algo inesperado');
 		}
 		const attachment = new MessageAttachment(response.message, 'clyde.png');
 		return message.channel.send({files: [attachment]});

@@ -15,11 +15,11 @@ module.exports = {
         let text = args.join(" ");
 
         if (text.length > 15) return message.channel.send({
-            content: "No mas de 15 letras"
+            content: "<:mal:977661656937168926> No mas de 15 letras"
         });
 
         if (!args.length) return message.channel.send({
-            content: "Añade tu texto porfavor"
+            content: "<:mal:977661656937168926> Añade tu texto porfavor"
         });
 
         message.channel.send(BigText(args.join(' ')));

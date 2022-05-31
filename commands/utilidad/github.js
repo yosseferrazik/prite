@@ -20,7 +20,7 @@ module.exports = {
         const name = args.join(' ');
         if (!name) {
             return message.channel.send(
-                `Porfavor proporciona un nombre `,
+                `<:mal:977661656937168926> Porfavor proporciona un nombre `,
             );
         }
 
@@ -32,7 +32,7 @@ module.exports = {
         }
         catch (e) {
             return message.channel.send(
-                `Uh , creo que no encontre tu usuario`,
+                `<:mal:977661656937168926> Uh , creo que no encontre tu usuario`,
             );
         }
 
