@@ -3,7 +3,7 @@ const { Client, Message, MessageEmbed, discord } = require("discord.js")
 module.exports = {
     name: "catsay",
     description: "Gato gato gato",
-    category: "entretenimiento",
+    category: "imagenes",
     aliases: [""],
     syntax: "catsay <algo>",
     run: async (client, message, args) => {

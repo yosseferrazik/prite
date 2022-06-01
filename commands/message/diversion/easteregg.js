@@ -4,7 +4,7 @@ const { Client, Message, MessageEmbed } = require("discord.js")
 module.exports = {
     name: "easteregg",
     description: "Un easter egg especial",
-    category: "entretenimiento",
+    category: "diversion",
     aliases: ["egg"],
     cooldown: 5,
     syntax: "easteregg",

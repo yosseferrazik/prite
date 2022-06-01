@@ -3,7 +3,7 @@ const { Client, Message, MessageEmbed } = require("discord.js")
 module.exports = {
     name: "ping",
     description: "Responde con pong",
-    category: "bot",
+    category: "informacion",
     aliases: ["pong"],
     cooldown: 5,
     syntax: "ping",

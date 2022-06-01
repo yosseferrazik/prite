@@ -6,7 +6,7 @@ module.exports = {
     name: "logro",
     aliases: ["achievement"],
     description: "Un nuevo logro desbloqueado ^^",
-    category: "entretenimiento",
+    category: "imagenes",
     syntax:"logro {logro}",
     cooldown: 4,
     run: async (client, message, args) => {

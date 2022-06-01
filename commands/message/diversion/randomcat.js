@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 module.exports = {
     name: "randomcat",
     description: "Un gato random",
-    category: "entretenimiento",
+    category: "diversion",
     aliases: ["cats", "gato"],
     syntax: "randomcat",
     run: async (client, message, args) => {

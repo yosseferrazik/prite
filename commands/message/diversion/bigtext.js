@@ -5,7 +5,7 @@ module.exports = {
     name: "bigtext",
     aliases: ["bt"],
     description: "Covierte lo que quieras en textos grandes",
-    category: "Fun",
+    category: "diversion",
     cooldown: 5,
     run: async (client, message, args) => {
 

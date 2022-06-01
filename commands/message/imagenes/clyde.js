@@ -9,7 +9,7 @@ module.exports = {
         description: 'Clyde dice...',
         aliases: ["clyde"],
         syntax: 'clyde <text>',
-        category: 'entretenimiento',
+        category: 'imagenes',
         run: async (bot, message, args) => {
     
         const text = args.slice().join(' ');

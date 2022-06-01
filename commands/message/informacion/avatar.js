@@ -3,7 +3,7 @@ const { Client, Message, MessageEmbed, discord } = require("discord.js")
 module.exports = {
     name: "avatar",
     description: "Te proporciona tu foto de perfil o la del usuario que menciones",
-    category: "utilidad",
+    category: "informacion",
     aliases: ["pfp"],
     syntax: "avatar [mencion]",
     run: async (client, message, args) => {

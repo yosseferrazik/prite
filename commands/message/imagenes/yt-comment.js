@@ -3,11 +3,11 @@ const config = require('../../../settings/config.json');
 const canvacord = require('canvacord');
 
 module.exports = {
-        name: 'comment',
+        name: 'yt-comment',
         description: 'Un comentario de YT',
         aliases: ["comentario"],
         usage: 'comment <text>',
-        category: 'entretenimiento',
+        category: 'imagenes',
         run: async (bot, message, args) => {
           
         const comment = args.join('');

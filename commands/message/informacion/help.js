@@ -10,7 +10,7 @@ Never gonna make you cry
 Never gonna say goodbye
 Never gonna tell a lie and hurt you`,
     aliases: ["h"],
-    category: "bot",
+    category: "informacion",
     syntax: "help [nombre del comando]",
     cooldown: 5,
     permissions: ["SEND_MESSAGES"],
@@ -24,8 +24,19 @@ Never gonna tell a lie and hurt you`,
          * @param {Message} message 
          */
 
-        try {
 
+
+
+        const row = new MessageActionRow()
+            .addComponents(
+                new MessageButton()
+                    .setLabel('Invitacion')
+                    .setURL('https://XD.com')
+                    .setStyle('LINK'),
+        );
+
+
+        try {
 
 
             if (args[0]) {
@@ -75,7 +86,7 @@ Never gonna tell a lie and hurt you`,
                 }
 
 
-                message.channel.send({ embeds: [embed] });
+                message.channel.send({ embeds: [embed], components: [row] });
             }
 
         } catch (error) {

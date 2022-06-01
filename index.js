@@ -6,7 +6,7 @@ const express = require("express");
 const app = express();
 const http = require("http"); 
 const fetch = require('node-fetch');
-const mongoose = require("mongoose");
+    const mongoose = require("mongoose");
 
 const client = new Client({ 
       messageCacheLifetime: 60,
@@ -78,7 +78,7 @@ app.get("/", (request, response) => {
     client.logger.log(`> ☁️  • Estamos en la nube `, "success");
   response.sendStatus(200);
 });
-app.listen(process.env.PORT);
+app.listen(3000);
 setInterval(() => {
   http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
 }, 60000);

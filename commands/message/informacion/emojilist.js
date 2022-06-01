@@ -4,7 +4,7 @@ const { Client, Message, MessageEmbed } = require("discord.js")
 module.exports = {
     name: "emojilist", 
     description: "Un comando para ver los emojis actuales del servidor", 
-    category: "utilidad", 
+    category: "informacion", 
     aliases: ["emojis"], 
     syntax: "emojilist", 
     permissions: ["MANAGE_EMOJIS"], 

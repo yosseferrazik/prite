@@ -5,7 +5,7 @@ module.exports = {
     name: "8ball",
     aliases: [],
     description: "Te da una respuesta a cualquier pregunta",
-    category: "entretenimiento",
+    category: "diversion",
     cooldown: 4,
     run: async (client, message, args) => {
 
