@@ -34,7 +34,6 @@
     "opusscript": "^0.0.8",
     "petitio": "^1.4.0",
     "simply-djs": "^2.5.2",
-    "srod-v2": "^1.0.2",
     "superagent": "^7.1.1"
   },
   "devDependencies": {

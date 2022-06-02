@@ -12,7 +12,9 @@ module.exports = {
     run: async (client, message, args) => {
 
 
-
+        if (!args[0]) {
+           return message.channel.send("<:mal:977661656937168926> Inserta texto ")
+        }
 
         let text = args.join(" ");
 
@@ -23,9 +25,7 @@ module.exports = {
         }
 
         figlet(text, function(err, data) {
-            message.channel.send(data, {
-                code: "AsciiArt",
-            });
+            message.channel.send(`\`\`\` ${data} \`\`\``);
         });
 
 

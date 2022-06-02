@@ -31,9 +31,9 @@ Never gonna tell a lie and hurt you`,
             .addComponents(
                 new MessageButton()
                     .setLabel('Invitacion')
-                    .setURL('https://XD.com')
+                    .setURL('https://discord.com/api/oauth2/authorize?client_id=905198577150738482&permissions=8&scope=bot%20applications.commands')
                     .setStyle('LINK'),
-        );
+            );
 
 
         try {

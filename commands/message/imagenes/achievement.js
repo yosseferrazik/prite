@@ -3,8 +3,8 @@ const superagent = require('superagent')
 
 module.exports = {
 
-    name: "logro",
-    aliases: ["achievement"],
+    name: "achievement",
+    aliases: ["logro"],
     description: "Un nuevo logro desbloqueado ^^",
     category: "imagenes",
     syntax:"logro {logro}",
