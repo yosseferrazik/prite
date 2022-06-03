@@ -4,13 +4,13 @@ const colors = require("colors")
 const discord = require('discord.js')
 const express = require("express");
 const app = express();
-const http = require("http"); 
+const http = require("http");
 const fetch = require('node-fetch');
-    const mongoose = require("mongoose");
+const mongoose = require("mongoose");
+const { DiscordTogether } = require('discord-together');
 
-const client = new Client({ 
-      messageCacheLifetime: 60,
-
+const client = new Client({
+    messageCacheLifetime: 60,
     restTimeOffset: 0,
     restWsBridgetimeout: 100,
     intents: 98045,
@@ -28,19 +28,19 @@ const client = new Client({
             })
         }
     },
-  
+
     disableMentions: 'everyone'
 
 });
 
 
 mongoose.connect(process.env.MONGO, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
 }).then(() => {
-  client.logger.log(`> ✅ • Se ha cargado exitosamente la base de datos`, "success");
+    client.logger.log(`> ✅ • Se ha cargado exitosamente la base de datos`, "success");
 }).catch(() => {
-  client.logger.log(`> ⛔ • Uh , creo que ha paso algo inesperado`, "error");
+    client.logger.log(`> ⛔ • Uh , creo que ha paso algo inesperado`, "error");
 })
 
 
@@ -50,12 +50,13 @@ client.config = config;
 client.cooldowns = new Collection();
 client.commands = new Collection();
 client.slsCommands = new Collection();
+client.discordTogether = new DiscordTogether(client);
 client.categories = require("fs").readdirSync(`./commands/message`);
 ["eventHandler", "commandHandler", "slsCmdHandler"]
     .filter(Boolean)
     .forEach(h => {
-      require(`./handlers/${h}`)(client);
-});
+        require(`./handlers/${h}`)(client);
+    });
 
 
 
@@ -76,11 +77,11 @@ process.on('uncaughtException', error => {
 
 app.get("/", (request, response) => {
     client.logger.log(`> ☁️  • Estamos en la nube `, "success");
-  response.sendStatus(200);
+    response.sendStatus(200);
 });
 app.listen(3000);
 setInterval(() => {
-  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+    http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
 }, 60000);
 
 client.login(process.env.TOKEN);
