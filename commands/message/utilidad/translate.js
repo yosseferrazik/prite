@@ -2,7 +2,7 @@ const { Client, Message, MessageEmbed, discord } = require("discord.js")
 const translate = require('@iamtraction/google-translate');
 
 module.exports = {
-    name: "tranlaste",
+    name: "translate",
     description: "Traduce lo que quieras",
     category: "utilidad",
     aliases: ["traductor"],

@@ -2,11 +2,11 @@ const { Client, Message, MessageEmbed, Discord, MessageAttachment } = require("d
 const canvacord = require("canvacord");
 
 module.exports = {
-    name: "trigger",
-    description: "¿De mal humor?",
+    name: "hitler",
+    description: "¿Que tan malo puede ser este comando?",
     category: "imagenes",
-    aliases: ["puteado"],
-    syntax: "trigger <mencion>",
+    aliases: [""],
+    syntax: "hitler <mencion>",
     cooldown: 5,
     permissions: ["SEND_MESSAGES"],
     run: async (client, message, args) => {
@@ -14,8 +14,8 @@ module.exports = {
 
 
         let avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
-        let image = await canvacord.Canvas.trigger(avatar);
-        let attachment = new MessageAttachment(image, "triggered.gif");
+        let image = await canvacord.Canvas.hitler(avatar);
+        let attachment = new MessageAttachment(image, "hitlered.gif");
         message.channel.send({ files: [attachment] });
 
     }

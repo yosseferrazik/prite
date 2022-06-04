@@ -14,6 +14,7 @@
     "axios": "^0.26.1",
     "canvacord": "^5.2.3",
     "chalk": "^4.1.2",
+    "cheerio": "^1.0.0-rc.11",
     "child_process": "^1.0.2",
     "colors": "^1.4.0",
     "discord-api-types": "^0.26.0",
@@ -26,6 +27,7 @@
     "figlet": "^1.5.2",
     "fs": "^0.0.2",
     "giphy-api": "^2.0.2",
+    "googlethis": "^1.2.9-d.3",
     "moment": "^2.29.1",
     "moment-duration-format": "^2.3.2",
     "moment-timezone": "^0.5.33",
@@ -35,9 +37,12 @@
     "node-fetch": "^2.6.7",
     "opusscript": "^0.0.8",
     "petitio": "^1.4.0",
+    "reddit-fetch": "^1.5.1",
+    "request": "^2.88.2",
     "simply-djs": "^2.5.2",
     "superagent": "^7.1.1",
-    "wtf_wikipedia": "^10.0.1"
+    "twemoji-parser": "^14.0.0",
+    "wikijs": "^6.3.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"

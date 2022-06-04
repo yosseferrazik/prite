@@ -1,14 +1,10 @@
+/************{ VARIABLES DISCORD }******************/
+
+const canvacord = require("canvacord");
 const config = require(`./settings/config.json`);
 const { Client, Intents, Collection } = require('discord.js');
-const colors = require("colors")
 const discord = require('discord.js')
-const express = require("express");
-const app = express();
-const http = require("http");
-const fetch = require('node-fetch');
-const mongoose = require("mongoose");
 const { DiscordTogether } = require('discord-together');
-
 const client = new Client({
     messageCacheLifetime: 60,
     restTimeOffset: 0,
@@ -28,12 +24,12 @@ const client = new Client({
             })
         }
     },
-
     disableMentions: 'everyone'
 
 });
+/************{ BASE DE DATOS }******************/
 
-
+const mongoose = require("mongoose");
 mongoose.connect(process.env.MONGO, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -43,6 +39,7 @@ mongoose.connect(process.env.MONGO, {
     client.logger.log(`> ⛔ • Uh , creo que ha paso algo inesperado`, "error");
 })
 
+/************{ COLECCIONES }******************/
 
 module.exports = client;
 client.logger = require('./settings/logger');
@@ -59,6 +56,7 @@ client.categories = require("fs").readdirSync(`./commands/message`);
     });
 
 
+/************{ ERROR HANDLER }******************/
 
 
 client.on('error', error => client.logger.log(error, "error"));
@@ -73,15 +71,17 @@ process.on('uncaughtException', error => {
 
 
 
+/************{ SERVIDOR EXPRESS }******************/
 
 
-app.get("/", (request, response) => {
-    client.logger.log(`> ☁️  • Estamos en la nube `, "success");
-    response.sendStatus(200);
-});
-app.listen(3000);
-setInterval(() => {
-    http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-}, 60000);
+const express = require('express')
+const app = express();
+const port = 3000
+
+app.get('/', (req, res) => res.send('¡¡ Online Yeah !!'))
+
+app.listen(port, () =>
+    console.log(`Your app is listening a http://localhost:${port}`)
+);
 
 client.login(process.env.TOKEN);

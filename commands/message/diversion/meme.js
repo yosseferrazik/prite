@@ -1,15 +1,18 @@
 const { Client, Message, MessageEmbed, discord } = require("discord.js")
-const red = require("reddit-fetch")
+const red = require('reddit-fetch')
+
 module.exports = {
-    name: "randomcat",
-    description: "Un gato random",
+    name: "meme",
+    description: "Meme random",
     category: "diversion",
-    aliases: ["cats", "gato"],
-    syntax: "randomcat",
+    aliases: ["momazo"],
+    syntax: "meme",
+    cooldown: 5,
+    permissions: ["SEND_MESSAGES"],
     run: async (client, message, args) => {
 
         red({
-            subreddit: 'cats',
+            subreddit: 'SpanishMeme',
             sort: 'hot',
             allowNSFW: false,
             allowModPost: false,
@@ -26,7 +29,6 @@ module.exports = {
                 message.channel.send({embeds: [embed]})
             }
         }).catch(() => message.channel.send("Hubo un error"))
-
 
 
     }

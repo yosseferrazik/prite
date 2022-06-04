@@ -1,15 +1,14 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageEmbed } = require('discord.js');
 const red = require("reddit-fetch")
-
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('randomcat')
-        .setDescription('¿ Te gustan los gatos  ?'),
+        .setName('meme')
+        .setDescription('Mejores momazos de la historia papus :v '),
     async execute(interaction, client, args) {
 
-  red({
-            subreddit: 'cats',
+        red({
+            subreddit: 'SpanishMeme',
             sort: 'hot',
             allowNSFW: false,
             allowModPost: false,
@@ -24,12 +23,14 @@ module.exports = {
 
             
             if (!post.url) {
-                return interaction.reply("No encontre mas fotos de gatos :(")
+                return interaction.reply("No encontre memes :(")
             } else {
                 interaction.reply({ embeds: [embed] })
             }
             
         })
+
+
 
 
     }
