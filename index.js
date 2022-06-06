@@ -1,6 +1,5 @@
 /************{ VARIABLES DISCORD }******************/
 
-const canvacord = require("canvacord");
 const config = require(`./settings/config.json`);
 const { Client, Intents, Collection } = require('discord.js');
 const discord = require('discord.js')
