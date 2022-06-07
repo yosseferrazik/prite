@@ -11,4 +11,4 @@ const schema = new Schema({
   },
 });
 
-module.exports = model("prefix", schema);
+module.exports = model("guild_settings", schema);

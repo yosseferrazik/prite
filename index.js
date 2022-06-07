@@ -80,7 +80,7 @@ const port = 3000
 app.get('/', (req, res) => res.send('¡¡ Online Yeah !!'))
 
 app.listen(port, () =>
-    console.log(`Your app is listening a http://localhost:${port}`)
+console.log(`Escuchando a http://localhost:${port}`)
 );
 
 client.login(process.env.TOKEN);

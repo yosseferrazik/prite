@@ -1,10 +1,11 @@
+/************{ Variables }******************/
+
 const fs = require("fs");
 const config = require(`../settings/config.json`);
 const { Client, Message, MessageEmbed, Collection } = require("discord.js")
-const discord = require("discord.js")
-const GuildSettings = require("../models/settings.js")
+
+const prefixData = require("../models/settings.js")
 const antilinkData = require("../models/antilinks.js");
-const Discord = require("discord.js");
 
 module.exports = {
     name: 'messageCreate',
@@ -37,19 +38,19 @@ module.exports = {
 
         //Prefix personalizado
 
-        let storedSettings = await GuildSettings.findOne({
+        let storedPrefix = await prefixData.findOne({
             GuildID: message.guild.id,
         });
-        if (!storedSettings) {
-            const newSettings = new GuildSettings({
+        if (!storedPrefix) {
+            const newPrefix = new prefixData({
                 GuildID: message.guild.id,
             });
-            await newSettings.save().catch((e) => {
+            await newPrefix.save().catch((e) => {
                 console.log(e);
             });
-            storedSettings = await GuildSettings.findOne({ GuildID: message.guild.id });
+            storedPrefix = await prefixData.findOne({ GuildID: message.guild.id });
         }
-        const prefix = storedSettings.Prefix;
+        const prefix = storedPrefix.Prefix;
 
         if (message.content === `<@!${client.user.id}>` || message.content === `<@${client.user.id}>`) {
             return message.channel.send(
@@ -71,10 +72,10 @@ module.exports = {
 
 
 
-
+        // Cooldown
 
         if (!client.cooldowns.has(cmd.name)) {
-            client.cooldowns.set(cmd.name, new discord.Collection());
+            client.cooldowns.set(cmd.name, new Collection());
         }
         let now = Date.now();
         let timeStamp = client.cooldowns.get(cmd.name) || new Collection();
@@ -83,7 +84,7 @@ module.exports = {
         let estimated = userCool + cool * 1000 - now;
 
         if (userCool && estimated > 0) {
-            let cool = new discord.MessageEmbed()
+            let cool = new MessageEmbed()
                 .setDescription(`<:mal:977661656937168926> Porfavor espera ${(estimated / 1000).toFixed()}s para volver a usar ${cmd.name} .`)
             return (await message.reply({ embeds: [cool] })
                 .then(msg => { setTimeout(() => msg.delete().catch(() => null), estimated) })
@@ -95,10 +96,10 @@ module.exports = {
 
 
         try {
-
+            // Permission handler
             if (cmd.owner && message.author.id !== client.config.ownerID) {
                 return message.reply({
-                    embeds: [new Discord.MessageEmbed()
+                    embeds: [new MessageEmbed()
                         .setColor("RED")
                         .setTitle("<:mal:977661656937168926> No puedes ejecutar este comando")
                         .setDescription("Deberias ser owner para ejecutar este comando")]
@@ -107,7 +108,7 @@ module.exports = {
 
             if (cmd.permissions && cmd.permissions.length > 0 && !message.member.permissions.has(cmd.permissions)) {
                 return message.reply({
-                    embeds: [new Discord.MessageEmbed()
+                    embeds: [new MessageEmbed()
                         .setColor("RED")
                         .setTitle("<:mal:977661656937168926> No puedes ejecutar este comando")
                         .setDescription(`Necesitas **${cmd.permissions}** para ejecutar este comando`)]

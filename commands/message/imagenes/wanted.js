@@ -2,11 +2,11 @@ const { Client, Message, MessageEmbed, Discord, MessageAttachment } = require("d
 const canvacord = require("canvacord");
 
 module.exports = {
-    name: "fuse",
-    description: "Fuuuuusion *referencia a dragonball*",
+    name: "wanted",
+    description: "En busca y captura",
     category: "imagenes",
-    aliases: ["puteado"],
-    syntax: "fuse <mencion>",
+    aliases: [""],
+    syntax: "wanted <mensaje>",
     cooldown: 5,
     permissions: ["SEND_MESSAGES"],
     run: async (client, message, args) => {
@@ -14,8 +14,8 @@ module.exports = {
 
 
         let avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
-        let image = await canvacord.Canvas.fuse(avatar, avatar);
-        let attachment = new MessageAttachment(image, "fuseed.gif");
+        let image = await canvacord.Canvas.wanted(avatar);
+        let attachment = new MessageAttachment(image, "wanted.gif");
         message.channel.send({ files: [attachment] });
 
     }
