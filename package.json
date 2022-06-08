@@ -5,7 +5,7 @@
   "author": "KhanessKA",
   "scripts": {
     "dev": "nodemon .",
-    "start": "clear && node ."
+    "start": "node ."
   },
   "dependencies": {
     "@discordjs/builders": "^0.10.0",

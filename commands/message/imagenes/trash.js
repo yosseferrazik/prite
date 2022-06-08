@@ -5,7 +5,7 @@ module.exports = {
     name: "trash",
     description: "¿De mal humor?",
     category: "imagenes",
-    aliases: ["puteado"],
+    aliases: [""],
     syntax: "trash <mencion>",
     cooldown: 5,
     permissions: ["SEND_MESSAGES"],
