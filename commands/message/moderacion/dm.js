@@ -18,13 +18,13 @@ module.exports = {
         if (!msg) {
             return message.channel.send("<:mal:977661656937168926> ¿Y el mensaje?");
         }
-        const user = client.users.cache.get(`${userid}`);
+        const user1 = client.users.cache.get(`${userid}`);
         const embed = new MessageEmbed()
             .setTitle(`De parte de ${message.author.tag}`)
             .setDescription(`${msg}`)
             .setColor("RANDOM");
 
-        user.send({ embeds: [embed] });
+        user1.send({ embeds: [embed] });
 
 
     }

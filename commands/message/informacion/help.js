@@ -72,7 +72,7 @@ Never gonna tell a lie and hurt you`,
                     .setTitle('❓ Ayuda')
                     .setDescription("Usa `help [nombre de un comando]` para ver la informacion de un comando en especifico")
                     .setThumbnail(client.user.displayAvatarURL())
-                    .setImage("https://i.imgur.com/5S7zAR7.png")
+
                     .setTimestamp()
                     .setFooter('<Importante> y [optional]');
 

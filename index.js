@@ -3,7 +3,6 @@
 const config = require(`./settings/config.json`);
 const { Client, Intents, Collection } = require('discord.js');
 const discord = require('discord.js')
-const { DiscordTogether } = require('discord-together');
 const client = new Client({
     messageCacheLifetime: 60,
     restTimeOffset: 0,
@@ -26,6 +25,7 @@ const client = new Client({
     disableMentions: 'everyone'
 
 });
+
 /************{ BASE DE DATOS }******************/
 
 const mongoose = require("mongoose");
@@ -46,7 +46,6 @@ client.config = config;
 client.cooldowns = new Collection();
 client.commands = new Collection();
 client.slsCommands = new Collection();
-client.discordTogether = new DiscordTogether(client);
 client.categories = require("fs").readdirSync(`./commands/message`);
 ["eventHandler", "commandHandler", "slsCmdHandler"]
     .filter(Boolean)

@@ -35,7 +35,7 @@ module.exports = {
       message
         .reply({
           content: `<:martillo:977666678932508734> ${member} Fue baneado`,
-        })
+        } + message.member.send("Te fuiste baneado \n https://www.youtube.com/watch?v=v9roIM8RyFE"))
 
     );
       } catch(err) {

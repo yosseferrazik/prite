@@ -22,7 +22,7 @@ module.exports = {
     })}, 5000); 
     
     
-    client.logger.log(`> 🔍 • Estoy en ${client.guilds.cache.size} Servers 🌐`, "info");
+    client.logger.log(`> 🔍 • Estoy en ${client.guilds.cache.size} Servers`, "info");
     client.logger.log(`> ✅ • Online en  ${client.user.username}\n\n======================================`, "success");
 
 
