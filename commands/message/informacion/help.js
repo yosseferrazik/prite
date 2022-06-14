@@ -15,7 +15,7 @@ Never gonna tell a lie and hurt you`,
     cooldown: 5,
     permissions: ["SEND_MESSAGES"],
     owner: false,
-    run: async (client, message, args) => {
+    run: async (client, message, args, config) => {
 
 
         /**
@@ -33,7 +33,14 @@ Never gonna tell a lie and hurt you`,
                     .setLabel('Invitacion')
                     .setURL('https://discord.com/api/oauth2/authorize?client_id=905198577150738482&permissions=8&scope=bot%20applications.commands')
                     .setStyle('LINK')
-                    .setEmoji('986204158690467840')
+                    .setEmoji('986204158690467840'),
+
+
+                     new MessageButton()
+                    .setLabel('Top.GG')
+                    .setURL('https://top.gg/bot/905198577150738482')
+                    .setStyle('LINK')
+                    .setEmoji('986210331539943524')
             );
 
 
@@ -46,7 +53,7 @@ Never gonna tell a lie and hurt you`,
                     message.channel.send("Ese comando no existe")
                 }
                 const help = new MessageEmbed()
-                    .setTitle(`❓ Ayuda`)
+                    .setTitle(config.pregunta + ` Ayuda`)
                     .setThumbnail(client.user.displayAvatarURL())
                     .setFooter('<Requerido> y [optional]')
                     .setColor(`${config.color}`)
@@ -70,8 +77,8 @@ Never gonna tell a lie and hurt you`,
             } else if (!args[0]) {
                 const embed = new MessageEmbed()
                     .setColor(`${config.color}`)
-                    .setTitle('❓ Ayuda')
-                    .setDescription("Usa `help [nombre de un comando]` para ver la informacion de un comando en especifico")
+                    .setTitle(config.pregunta + 'Ayuda')
+                    .setDescription("Usa `p.help [nombre de un comando]` para ver la informacion de un comando en especifico")
                     .setThumbnail(client.user.displayAvatarURL())
 
                     .setTimestamp()
