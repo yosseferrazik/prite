@@ -8,7 +8,7 @@ module.exports = {
     category: "utilidad",
     aliases: ["git"],
     syntax: "github <usuario>",
-    run: async (client, message, args) => {
+    run: async (client, message, args, config) => {
 
 
 
@@ -20,7 +20,7 @@ module.exports = {
         const name = args.join(' ');
         if (!name) {
             return message.channel.send(
-                `<:mal:977661656937168926> Porfavor proporciona un nombre `,
+                config.mal + `Porfavor proporciona un nombre `,
             );
         }
 
@@ -32,7 +32,7 @@ module.exports = {
         }
         catch (e) {
             return message.channel.send(
-                `<:mal:977661656937168926> Uh , creo que no encontre tu usuario`,
+                config.mal + ` Uh , creo que no encontre tu usuario`,
             );
         }
 

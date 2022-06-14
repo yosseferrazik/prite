@@ -8,12 +8,12 @@ module.exports = {
     syntax: "pokeimg <nombre>",
     cooldown:5,
     permissions:["SEND_MESSAGES"],
-    run: async (client, message, args) => {
+    run: async (client, message, args , config) => {
 
 
     const name = args.join(" ");
     if (!name) {
-      return message.channel.send("<:mal:977661656937168926> ¿Como se llama tu pokemon?");
+      return message.channel.send(config.mal + "¿Como se llama tu pokemon?");
     }
     const link = `https://i.some-random-api.ml/pokemon/${name}.png`;
     const embed = new MessageEmbed()

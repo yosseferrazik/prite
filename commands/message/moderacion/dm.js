@@ -9,22 +9,19 @@ module.exports = {
     permissions: ["ADMINISTRATOR"], 
     cooldown: 5,
     run: async (client, message, args) => {
+        
+      message.delete();
 
-        const userid = args[0];
-        if (!userid) {
-            return message.channel.send("<:mal:977661656937168926> Inserta id");
-        }
-        const msg = args.slice(1).join(" ");
-        if (!msg) {
-            return message.channel.send("<:mal:977661656937168926> ¿Y el mensaje?");
-        }
-        const user1 = client.users.cache.get(`${userid}`);
-        const embed = new MessageEmbed()
-            .setTitle(`De parte de ${message.author.tag}`)
-            .setDescription(`${msg}`)
-            .setColor("RANDOM");
-
-        user1.send({ embeds: [embed] });
+      const user = message.mentions.users.first();
+      const text = args.slice(1).join(" ");
+    
+      let embed = new MessageEmbed()
+      .setTitle("**Querido usuario**")
+      .setDescription(`${text}`)
+      .setColor("#FBD570")
+      .setFooter('Mensaje Directo')
+      user.send({ embeds: [embed] })
+    
 
 
     }

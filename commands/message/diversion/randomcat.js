@@ -21,7 +21,7 @@ module.exports = {
                 .setTitle(post.title)
                 .setImage(post.url)
             if (!post.url) {
-                return message.channel.send("No encontre memes :(")
+                return message.channel.send("No mas gatos :(")
             } else {
                 message.channel.send({embeds: [embed]})
             }

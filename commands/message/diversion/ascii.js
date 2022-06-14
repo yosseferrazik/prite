@@ -9,18 +9,18 @@ module.exports = {
     syntax: "ascii <texto>",
     cooldown: 5,
     permissions: ["SEND_MESSAGES"],
-    run: async (client, message, args) => {
+    run: async (client, message, args , config) => {
 
 
         if (!args[0]) {
-           return message.channel.send("<:mal:977661656937168926> Inserta texto ")
+           return message.channel.send(config.mal + "Inserta texto ")
         }
 
         let text = args.join(" ");
 
         if (text.length > 20) {
             return message.channel.send(
-                `<:mal:977661656937168926>  Porfavor intenta que no supere las 20 letras`
+                `${config.mal}  Porfavor intenta que no supere las 20 letras`
             );
         }
 

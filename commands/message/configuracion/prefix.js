@@ -15,9 +15,9 @@ module.exports = {
 	 * @param {Message} message 
 	 */
 
-    run: async (client, message, args) => {
-        if (!args[0]) return message.channel.send("<:bien:977661657050415174> ¿ Y el prefix ?")
-        if (args[0].length > 5) return message.channel.send("<:bien:977661657050415174> El prefix no debe ser mayor a 5 caracteres")
+    run: async (client, message, args, config) => {
+        if (!args[0]) return message.channel.send(`${config.mal} ¿ Y el prefix ?`)
+        if (args[0].length > 5) return message.channel.send(config.mal + "El prefix no debe ser mayor a 5 caracteres")
 
         try {
 
@@ -36,10 +36,10 @@ module.exports = {
                 console.log(e);
             });
 
-            message.channel.send(`<:bien:977661657050415174> Prefix cambiado a **${args[0]}**`)
+            message.channel.send(config.bien + ` Prefix cambiado a **${args[0]}**`)
 
         } catch (error) {
-            message.channel.send("<:mal:977661656937168926> Uy , paso algo inesperado");
+            message.channel.send(config.mal + " Uy , paso algo inesperado");
             console.log("ERROR :: " + error)
         }
 

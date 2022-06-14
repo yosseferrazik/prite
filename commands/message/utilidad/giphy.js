@@ -7,13 +7,13 @@ module.exports = {
     category: "utilidad",
     aliases: ["gif"],
     syntax: "gif <gif>",
-    run: async (client, message, args) => {
+    run: async (client, message, args, config) => {
 
 
 
 
         if (args.length === 0) {
-            message.channel.send("<:mal:977661656937168926> ¿Y el gif?");
+            message.channel.send(config.mal + " ¿Y el gif?");
             return;
         }
         if (args.length === 1) {

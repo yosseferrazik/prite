@@ -11,7 +11,6 @@ module.exports = {
     name: 'messageCreate',
     async execute(client, message) {
 
-
         // Antilinks
 
         const antilink = await antilinkData.findOne({
@@ -116,7 +115,7 @@ module.exports = {
             }
 
             if (cmd) {
-                await cmd.run(client, message, args);
+                await cmd.run(client, message, args, config);
             }
 
         } catch (error) {

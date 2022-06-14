@@ -9,19 +9,19 @@ module.exports = {
     category: "imagenes",
     syntax: "logro {logro}",
     cooldown: 4,
-    run: async (client, message, args) => {
+    run: async (client, message, args, config) => {
 
 
         try {
             let text = args.join(" ");
             if (!text) return message.channel.send({
-                content: "<:mal:977661656937168926> Que triste , ¿y el logo?"
+                content: config.mal + " Que triste , ¿y el logro?"
             });;
             if (text.length > 23) return message.channel.send({
-                content: "<:mal:977661656937168926> El logro no debe ser mayor a 23 letras "
+                content: config.mal + " El logro no debe ser mayor a 23 letras "
             });;
             if (text.length < 2) return message.channel.send({
-                content: "<:mal:977661656937168926> El logro debe ser mayor a 3 letras"
+                content: config.mal + "El logro debe ser mayor a 3 letras"
             });;
 
             let links = ["https://www.minecraftskinstealer.com/achievement/a.php?i=38", "https://www.minecraftskinstealer.com/achievement/a.php?i=1", "https://www.minecraftskinstealer.com/achievement/a.php?i=21", "https://www.minecraftskinstealer.com/achievement/a.php?i=20", "https://www.minecraftskinstealer.com/achievement/a.php?i=13", "https://www.minecraftskinstealer.com/achievement/a.php?i=18", "https://www.minecraftskinstealer.com/achievement/a.php?i=17", "https://www.minecraftskinstealer.com/achievement/a.php?i=9", "https://www.minecraftskinstealer.com/achievement/a.php?i=31", "https://www.minecraftskinstealer.com/achievement/a.php?i=22", "https://www.minecraftskinstealer.com/achievement/a.php?i=23", "https://www.minecraftskinstealer.com/achievement/a.php?i=2", "https://www.minecraftskinstealer.com/achievement/a.php?i=11", "https://www.minecraftskinstealer.com/achievement/a.php?i=19", "https://www.minecraftskinstealer.com/achievement/a.php?i=33", "https://www.minecraftskinstealer.com/achievement/a.php?i=34", "https://www.minecraftskinstealer.com/achievement/a.php?i=26", "https://www.minecraftskinstealer.com/achievement/a.php?i=35", "https://www.minecraftskinstealer.com/achievement/a.php?i=6", "https://www.minecraftskinstealer.com/achievement/a.php?i=7", "https://www.minecraftskinstealer.com/achievement/a.php?i=10", "https://www.minecraftskinstealer.com/achievement/a.php?i=39", "https://www.minecraftskinstealer.com/achievement/a.php?i=4", "https://www.minecraftskinstealer.com/achievement/a.php?i=5", "https://www.minecraftskinstealer.com/achievement/a.php?i=28"]

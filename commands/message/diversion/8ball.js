@@ -7,7 +7,7 @@ module.exports = {
     description: "Te da una respuesta a cualquier pregunta",
     category: "diversion",
     cooldown: 4,
-    run: async (client, message, args) => {
+    run: async (client, message, args , config) => {
 
         let list = [
             'Si', 'N0', 'Puede ser', 'Lo dudo', 'Arriba españa', 'XD ok no', 'No lo creo', 'La respuesta es evidente ', 'La respuesta esta en tu corazon', 'hmmmmmmm... lo siento pero no , chupala  ', 'jaj te gusta el pene '];
@@ -18,13 +18,13 @@ module.exports = {
         let pregunta = (args[0]);
         if (!pregunta) {
             return message.channel.send({
-                content: "<:mal:977661656937168926> ¿ Y la pregunta ?"
+                content: config.mal + " ¿ Y la pregunta ?"
             });
         }
 
 
 
-        await message.channel.send(`<:8ball:981081849377992714> ${rand}`);
+        await message.channel.send(`<:8ball:981081849377992714> ${rand} `);
 
 
 

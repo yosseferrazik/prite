@@ -1,9 +1,12 @@
 
  {
-  "mongo": "mongodb+srv://khanesska:khanesska@prite.i4s6r.mongodb.net/?retryWrites=true&w=majority",
   "prefix": "p.",
   "slashGlobal": true,
   "testGuildID": "951865800103428136",
   "ownerID": "898444313049042974" ,
-  "color":"#3ba3e8"
+  "color":"#3ba3e8",
+  "bien":"<:bien:977661657050415174>",
+  "mal":"<:mal:977661656937168926>",
+  "martillo":"<:martillo:977666678932508734>"
+     
 }

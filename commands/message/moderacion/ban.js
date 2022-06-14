@@ -10,32 +10,32 @@ module.exports = {
     syntax:"ban {usuario}[razon]",
     permissions: ["BAN_MEMBERS"], 
 
-    run: async (client, message, args) => {
+    run: async (client, message, args , config) => {
 
    try {
     const member = message.mentions.members.first();
 
 
-    if (!args[0]) return message.reply(`<:mal:977661656937168926> ¿ A quien quieres banear ?`);
+    if (!args[0]) return message.reply(config.mal + ` ¿ A quien quieres banear ?`);
 
-    if (!member) return message.reply(`<:mal:977661656937168926> No logro encontrar al usuario que buscas`);
+    if (!member) return message.reply(config.mal + `No logro encontrar al usuario que buscas`);
 
     if (member.id === message.author.id)
-      return message.reply(`<:mal:977661656937168926> No te puedes banear`);
+      return message.reply(config.mal + ` No te puedes banear`);
 
     if (message.member.roles.highest.position < member.roles.highest.position)
       return message.reply(
-        `<:mal:977661656937168926> No puedes banear a quien tiene un rol mas alto que el tuyo...`
+        config.mal + ` No puedes banear a quien tiene un rol mas alto que el tuyo...`
       );
 
-    if (!member.bannable) return message.reply(`<:mal:977661656937168926> No puedo banear a este usuario`);
+    if (!member.bannable) return message.reply(config.mal + ` No puedo banear a este usuario`);
 
     return (
       (await member.ban()) +
       message
         .reply({
-          content: `<:martillo:977666678932508734> ${member} Fue baneado`,
-        } + message.member.send("Te fuiste baneado \n https://www.youtube.com/watch?v=v9roIM8RyFE"))
+          content: config.bien + ` ${member} Fue baneado`,
+        } + member.send("Te fuiste baneado \n https://www.youtube.com/watch?v=v9roIM8RyFE"))
 
     );
       } catch(err) {

@@ -9,18 +9,18 @@ module.exports = {
     syntax: "translate <lenguage> <text>",
     cooldown: 3,
     permissions: ["SEND_MESSAGES"],
-    run: async (client, message, args) => {
+    run: async (client, message, args, config) => {
 
 
 
 
 
         const lenguage = args[0]
-        if (!lenguage) return message.channel.send(`<:mal:977661656937168926>  Deberias poner un idioma , ¿No? , te recuero que debes poner la inicial del lenguage , como __en__ ingles  o __es__ español  `);
+        if (!lenguage) return message.channel.send(config.mal + ` Deberias poner un idioma , ¿No? , te recuero que debes poner la inicial del lenguage , como __en__ ingles  o __es__ español  `);
 
         const text = args.slice(1).join(" ")
 
-        if (!text) return message.channel.send(`<:mal:977661656937168926>  Inserta texto porfavor`);
+        if (!text) return message.channel.send(config.mal + ` Inserta texto porfavor`);
 
         translate(text, {
             to: lenguage

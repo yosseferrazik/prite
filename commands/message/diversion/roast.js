@@ -8,7 +8,7 @@ module.exports = {
     syntax: "roast <usuario>",
     cooldown:5,
     permissions:["SEND_MESSAGES"],
-    run: async (client, message, args) => {
+    run: async (client, message, args , config) => {
 
 
         
@@ -18,11 +18,11 @@ module.exports = {
         }
     if (args.length == 0) {
       return message.channel
-        .send("<:mal:977661656937168926> Menciona a alguien")
+        .send(config.mal + " Menciona a alguien")
 
     }
     var roasts = [
-      "*Te mete en el horno*",
+      "*lo mete en el horno*",
       "Eres tan tonto",
       "Lo siento, no puedo oírte por lo molesto que eres",
       "Tengo mejores cosas que hacer",

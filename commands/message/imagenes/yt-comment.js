@@ -8,10 +8,10 @@ module.exports = {
     aliases: ["comentario"],
     usage: 'comment <text>',
     category: 'imagenes',
-    run: async (bot, message, args) => {
+    run: async (bot, message, args, config) => {
 
         const comment = args.join('');
-        if (!comment) return message.channel.send(`<:mal:977661656937168926> ¿Y el comentario?`)
+        if (!comment) return message.channel.send(config.mal + `¿Y el comentario?`)
         try {
 
 
@@ -23,9 +23,8 @@ module.exports = {
                 message.channel.send({ files: [attachment] });
         } catch (err) {
 
-            const embed2 = new Discord.MessageEmbed()
-                .setTitle(`<:mal:977661656937168926> Hm a pasado algo inesperado .`)
-            message.channel.send({ embeds: [embed2] });
+  
+            message.channel.send(config.mal + err);
         }
 
     }

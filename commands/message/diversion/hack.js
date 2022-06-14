@@ -9,12 +9,12 @@ module.exports = {
     syntax: "hack <mencion>",
     cooldown: 8,
     permissions: ["SEND_MESSAGES"],
-    run: async (client, message, args) => {
+    run: async (client, message, args , config ) => {
 
 
         if (!args[0]) {
             return message.channel.send(
-                "<:mal:977661656937168926> ¿ whoa... A quien queremos hackear ?"
+                config.mal + "¿ whoa... A quien queremos hackear ?"
             );
         }
         const tohack = message.mentions.members.first();

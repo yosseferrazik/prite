@@ -11,7 +11,7 @@ module.exports = {
     syntax: "antilinks <on|off>",
     permissions: ["ADMINISTRATOR"],
     owner: false,
-    run: async (client, message, args) => {
+    run: async (client, message, args, config) => {
 
         /**
          * 
@@ -21,7 +21,7 @@ module.exports = {
 
 
 if(!args[0]) {
-    message.channel.send(`<:mal:977661656937168926> Hm... elije On o Off `)
+    message.channel.send(`${config.mal} Hm... elije On o Off `)
 }
 
 
@@ -61,7 +61,7 @@ if(!args[0]) {
 
                 return message.channel.send(`Se desactivo la barrera antilinks`);
             } else if (!data2) {
-                return message.channel.send(`<:mal:977661656937168926> No estaba activada`);
+                return message.channel.send(`${config.mal} No estaba activada`);
             }
         } 
         }

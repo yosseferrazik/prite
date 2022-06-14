@@ -7,7 +7,7 @@ module.exports = {
     description: "Covierte lo que quieras en textos grandes",
     category: "diversion",
     cooldown: 5,
-    run: async (client, message, args) => {
+    run: async (client, message, args, config)=> {
 
 
 
@@ -15,11 +15,11 @@ module.exports = {
         let text = args.join(" ");
 
         if (text.length > 15) return message.channel.send({
-            content: "<:mal:977661656937168926> No mas de 15 letras"
+            content: config.mal + " No mas de 15 letras"
         });
 
         if (!args.length) return message.channel.send({
-            content: "<:mal:977661656937168926> Añade tu texto porfavor"
+            content: config.mal + " Añade tu texto porfavor"
         });
 
         message.channel.send(BigText(args.join(' ')));
