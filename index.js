@@ -35,7 +35,7 @@ mongoose.connect(process.env.MONGO, {
 }).then(() => {
     client.logger.log(`> ✅ • Se ha cargado exitosamente la base de datos`, "success");
 }).catch(() => {
-    client.logger.log(`> ⛔ • Uh , creo que ha paso algo inesperado`, "error");
+    client.logger.log(`> ⛔ • Uh , no se cargo la base de datos`, "error");
 })
 
 /************{ COLECCIONES }******************/
