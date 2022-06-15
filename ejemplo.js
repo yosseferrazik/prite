@@ -9,7 +9,7 @@ module.exports = {
     cooldown:"",
     owner:"",
     permissions:[""],
-    run: async (client, message, args) => {
+    run: async (client, message, args , config) => {
 
 
         
