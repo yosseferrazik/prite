@@ -34,12 +34,12 @@ module.exports = {
       (await member.ban()) +
       message
         .reply({
-          content: config.bien + ` ${member} Fue baneado`,
-        } + member.send("Te fuiste baneado \n https://www.youtube.com/watch?v=v9roIM8RyFE"))
+          content: config.martillo + ` ${member} Fue baneado`,
+        })
 
     );
       } catch(err) {
-        message.reply(`<:mal:977661656937168926> awww a pasado algo inesperado -> ${err}`)
+        message.reply(config.mal + ` awww a pasado algo inesperado -> ${err}`)
       }
     }
 };
