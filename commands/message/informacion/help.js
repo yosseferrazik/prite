@@ -33,14 +33,14 @@ Never gonna tell a lie and hurt you`,
                     .setLabel('Invitacion')
                     .setURL('https://discord.com/api/oauth2/authorize?client_id=905198577150738482&permissions=8&scope=bot%20applications.commands')
                     .setStyle('LINK')
-                    .setEmoji('986534478346330112'),
+                    .setEmoji('987043173413031936'),
 
 
                      new MessageButton()
                     .setLabel('Top.GG')
                     .setURL('https://top.gg/bot/905198577150738482')
                     .setStyle('LINK')
-                    .setEmoji('986210331539943524')
+                    .setEmoji('987043034871001228')
             );
 
 
