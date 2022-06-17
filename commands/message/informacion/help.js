@@ -36,7 +36,7 @@ Never gonna tell a lie and hurt you`,
                     .setEmoji('987043173413031936'),
 
 
-                     new MessageButton()
+                new MessageButton()
                     .setLabel('Top.GG')
                     .setURL('https://top.gg/bot/905198577150738482')
                     .setStyle('LINK')
@@ -80,8 +80,6 @@ Never gonna tell a lie and hurt you`,
                     .setTitle(config.pregunta + 'Ayuda')
                     .setDescription("Usa `p.help [nombre de un comando]` para ver la informacion de un comando en especifico")
                     .setThumbnail(client.user.displayAvatarURL())
-
-                    .setTimestamp()
                     .setFooter('<Importante> y [optional]');
 
                 const commands = (category) => {

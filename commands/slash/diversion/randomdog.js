@@ -5,7 +5,7 @@ const fetch = require('node-fetch');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('randomdog')
-        .setDescription('¿ Te gustan los perros  ?'),
+        .setDescription('Lo mismo que el gato , pero en perro :D'),
     async execute(interaction, client, args) {
 
 

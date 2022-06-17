@@ -5,7 +5,7 @@ const red = require("reddit-fetch")
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('randomcat')
-        .setDescription('¿ Te gustan los gatos  ?'),
+        .setDescription('Un gato para cada dia'),
     async execute(interaction, client, args) {
 
   red({
