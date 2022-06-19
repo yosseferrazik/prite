@@ -31,7 +31,7 @@ Never gonna tell a lie and hurt you`,
             .addComponents(
                 new MessageButton()
                     .setLabel('Invitacion')
-                    .setURL('https://discord.com/api/oauth2/authorize?client_id=905198577150738482&permissions=8&scope=bot%20applications.commands')
+                    .setURL('https://discord.com/api/oauth2/authorize?client_id=905198577150738482&permissions=1644971949559&scope=bot%20applications.commands')
                     .setStyle('LINK')
                     .setEmoji('987043173413031936'),
 

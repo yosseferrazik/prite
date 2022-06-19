@@ -1,11 +1,11 @@
 const { Client, Message, MessageEmbed, discord } = require("discord.js")
 
 module.exports = {
-    name: "topusers",
+    name: "topservers",
     description: "En donde estoy",
     category: "informacio",
-    aliases: ["top-user"],
-    syntax: "topuser",
+    aliases: ["top-servers"],
+    syntax: "topservers",
     cooldown: 7,
     permissions: [""],
     run: async (client, message, args, config) => {
@@ -18,7 +18,7 @@ module.exports = {
         }).join(`\n`)
 
         const embed = new MessageEmbed()
-            .setTitle('Top servidores')
+            .setTitle('Top 10 servidores')
             .setDescription(description)
 
         message.channel.send({ embeds: [embed] })
