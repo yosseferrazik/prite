@@ -7,6 +7,7 @@ module.exports = {
     description: "Te da una respuesta a cualquier pregunta",
     category: "diversion",
     cooldown: 4,
+    syntax:"8ball <pregunta>",
     run: async (client, message, args , config) => {
 
         let list = [

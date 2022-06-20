@@ -6,9 +6,9 @@ module.exports = {
     name: 'yt-comment',
     description: 'Un comentario de YT',
     aliases: ["comentario"],
-    usage: 'comment <text>',
     category: 'imagenes',
-    run: async (bot, message, args, config) => {
+    syntax:"yt-comment <texto>",
+    run: async (client, message, args, config) => {
 
         const comment = args.join('');
         if (!comment) return message.channel.send(config.mal + `¿Y el comentario?`)

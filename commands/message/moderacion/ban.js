@@ -4,7 +4,7 @@ module.exports = {
 
     name: "ban",
     aliases: ["prohibir"],
-    description: "Condena a cadena perpetua a un miembro , con este comando conseguiras expulsar a un miembro para siempre",
+    description: "Expulsa permanente a un miembro",
     category: "moderacion",
     cooldown: 5,
     syntax:"ban {usuario}[razon]",

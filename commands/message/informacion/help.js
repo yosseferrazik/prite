@@ -3,12 +3,7 @@ const config = require('../../../settings/config.json');
 
 module.exports = {
     name: "help",
-    description: `Never gonna give you up
-Never gonna let you down
-Never gonna run around and desert you
-Never gonna make you cry
-Never gonna say goodbye
-Never gonna tell a lie and hurt you`,
+    description: `¿ Realmente necesitas ayuda sobre este comando ?`,
     aliases: ["h"],
     category: "informacion",
     syntax: "help [nombre del comando]",

@@ -5,7 +5,7 @@ module.exports = {
 
     name: "hackban",
     aliases: ["idban", "softban"],
-    description: "Condena a cadena perpetua a un miembro , con este comando conseguiras expulsar a un miembro para siempre via ID",
+    description: "Asegurate de que no volvera prohibiendolo por ID",
     category: "moderacion",
     cooldown: 5,
     syntax: "hackban {ID}",

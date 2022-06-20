@@ -3,7 +3,7 @@ const canvacord = require("canvacord");
 
 module.exports = {
     name: "trash",
-    description: "¿De mal humor?",
+    description: "Eres basura , nah es una broma xd",
     category: "imagenes",
     aliases: [""],
     syntax: "trash <mencion>",

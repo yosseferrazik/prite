@@ -2,10 +2,10 @@ const { Client, Message, MessageEmbed, Discord } = require("discord.js")
 
 module.exports = {
     name: "dm",
-    description: "Habla entre miembros de tu grupo por dm",
+    description: "Habla con los miembros de tu servidor",
     category: "moderacion",
     aliases: ["directmessage"],
-    syntax: "dm <id de persona> <mensaje>",
+    syntax: "dm <mencion> <mensaje>",
     permissions: ["ADMINISTRATOR"], 
     cooldown: 5,
     run: async (client, message, args) => {

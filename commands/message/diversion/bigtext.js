@@ -6,6 +6,7 @@ module.exports = {
     aliases: ["bt"],
     description: "Covierte lo que quieras en textos grandes",
     category: "diversion",
+    syntax:"bigtext <texto>",
     cooldown: 5,
     run: async (client, message, args, config)=> {
 
