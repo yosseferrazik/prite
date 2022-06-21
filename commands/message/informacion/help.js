@@ -2,11 +2,11 @@ const { MessageEmbed, Client, Message, MessageActionRow, MessageSelectMenu, Mess
 
 
 module.exports = {
-    name: "help",
+    name: "help-beta",
     description: `¿ Enserio necesitas saber para que sirve ?`,
-    aliases: ["h", "ayuda"],
+    aliases: ["hbeta"],
     category: "informacion",
-    syntax: "help [nombre del comando]",
+    syntax: "help",
     cooldown: 5,
     permissions: ["SEND_MESSAGES"],
     owner: false,
