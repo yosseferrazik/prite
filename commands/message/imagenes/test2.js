@@ -7,7 +7,9 @@ module.exports = {
         const commands = (category) => {
             return client.commands.filter((cmd) => cmd.category === category).map((cmd) => `> **${config.prefix}${cmd.syntax}** : ${cmd.description} \n`);
         };
-
+        const commands2 = (category) => {
+            return client.commands.filter((cmd) => cmd.category === category).map((cmd) => `${cmd.name}`);
+        };
 
 
         const row = new MessageActionRow()
@@ -59,12 +61,36 @@ module.exports = {
                     ]),
             )
 
-        const embed = new MessageEmbed()       
-.setTitle('Tu bot multifunciones de confianza')
-            .setDescription(`Soy Prite un bot multifunciones con mas de 45 comandos unicos .`)
-            .addField('Links', '> [Top.GG](https://top.gg/bot/905198577150738482) \n> [Invitacion](https://dsc.gg/prite)')
-            .setThumbnail(client.user.displayAvatarURL())
-            .setColor("RANDOM")
+        const atips = config.tips
+        const randtips = atips[Math.floor(Math.random() * atips.length)];
+
+        const embed = new MessageEmbed()
+            .setTitle(`Lista de comandos pedida por : ${message.author.tag}`)
+
+        for (let i = 0; i < client.categories.length; i += 1) {
+            const current = client.categories[i];
+            const items = commands2(current);
+            embed.addField(`**${current.toUpperCase()} [${items.length}]**`, ` ${items.join("  ,  ")}\nㅤ`);
+        }
+
+        embed.addFields(
+            { name: 'Tips', value: `${randtips}` },
+            { name: 'Links', value: '> <:topgg:987043034871001228> [Top.GG](https://top.gg/bot/905198577150738482) \n> <:discord:987043173413031936> [Invitacion](https://dsc.gg/prite)' }
+        )
+        embed.setImage("https://i.imgur.com/hikfCHC.png")
+        embed.setColor("RANDOM")
+
+
+
+
+
+
+
+
+
+
+
+
 
         const m = await message.channel.send({ embeds: [embed], components: [row] })
         const ifilter = i => i.user.id === message.author.id;

@@ -8,6 +8,12 @@
   "bien":"<:bien:987800781677805568>",
   "mal":"<:mal:987800784085340220>",
   "martillo":":hammer:",
-  "pregunta":"❓"
+  "pregunta":"❓",
+  "tips": [
+   "Usa p.help para tener una lista completa de los comandos",
+   "¿Alguien ve esto?",  
+   "Usa p.egg xd",
+   "Si me invitas te doy un besote en la boca xD"
+   ]
      
 }

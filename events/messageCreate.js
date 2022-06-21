@@ -84,9 +84,9 @@ module.exports = {
 
         if (userCool && estimated > 0) {
             let cool = new MessageEmbed()
-                .setDescription(`<:mal:977661656937168926> Porfavor espera ${(estimated / 1000).toFixed()}s para volver a usar ${cmd.name} .`)
+                .setDescription(config.mal + ` Porfavor espera ${(estimated / 1000).toFixed()}s para volver a usar ${cmd.name} .`)
             return (await message.reply({ embeds: [cool] })
-                .then(msg => { setTimeout(() => msg.delete().catch(() => null), estimated) })
+                .then(msg => { setTimeout(() => msg.delete().catch(() => null), estimated + 1) })
             )
         }
 
