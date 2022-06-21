@@ -2,9 +2,9 @@ const { MessageEmbed, Client, Message, MessageActionRow, MessageSelectMenu, Mess
 
 
 module.exports = {
-    name: "help-beta",
+    name: "help",
     description: `¿ Enserio necesitas saber para que sirve ?`,
-    aliases: ["hbeta"],
+    aliases: ["h","ayuda"],
     category: "informacion",
     syntax: "help",
     cooldown: 5,
@@ -116,7 +116,7 @@ module.exports = {
 
             if (i.values[0] === "configuracion") {
                 await i.deferUpdate()
-                const current = client.categories[1];
+                const current = client.categories[0];
                 const items = commands(current);
 
                 const configuracion = new MessageEmbed()
@@ -130,7 +130,7 @@ module.exports = {
 
             if (i.values[0] === "diversion") {
                 await i.deferUpdate()
-                const current = client.categories[2];
+                const current = client.categories[1];
                 const items = commands(current);
 
                 const diversion = new MessageEmbed()
@@ -144,7 +144,7 @@ module.exports = {
 
             if (i.values[0] === "imagen") {
                 await i.deferUpdate()
-                const current = client.categories[3];
+                const current = client.categories[2];
                 const items = commands(current);
 
                 const imagenes = new MessageEmbed()
@@ -158,7 +158,7 @@ module.exports = {
 
             if (i.values[0] === "informacion") {
                 await i.deferUpdate()
-                const current = client.categories[4];
+                const current = client.categories[3];
                 const items = commands(current);
 
                 const informacion = new MessageEmbed()
@@ -171,7 +171,7 @@ module.exports = {
             }
             if (i.values[0] === "moderacion") {
                 await i.deferUpdate()
-                const current = client.categories[5];
+                const current = client.categories[4];
                 const items = commands(current);
 
                 const moderacion = new MessageEmbed()
@@ -184,7 +184,7 @@ module.exports = {
             }
             if (i.values[0] === "utilidad") {
                 await i.deferUpdate()
-                const current = client.categories[6];
+                const current = client.categories[5];
                 const items = commands(current);
 
                 const moderacion = new MessageEmbed()

@@ -2,9 +2,9 @@ const { MessageEmbed, Client, Message, MessageActionRow, MessageButton } = requi
 const config = require('../../../settings/config.json');
 
 module.exports = {
-    name: "help",
+    name: "helpv1",
     description: `¿ Realmente necesitas ayuda sobre este comando ?`,
-    aliases: ["h", "ayuda"],
+    aliases: [],
     category: "",
     syntax: "help [nombre del comando]",
     cooldown: 5,
