@@ -3,7 +3,7 @@ const config = require('../../../settings/config.json');
 
 module.exports = {
     name: "helpv1",
-    description: `¿ Realmente necesitas ayuda sobre este comando ?`,
+    description: `Comando arhcivado`,
     aliases: [],
     category: "",
     syntax: "help [nombre del comando]",

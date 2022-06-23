@@ -81,15 +81,7 @@ module.exports = {
         const randtips = atips[Math.floor(Math.random() * atips.length)];
 
         const embed = new MessageEmbed()
-            .setTitle(`Lista de comandos pedida por : ${message.author.tag}`)
-
-        for (let i = 0; i < client.categories.length; i += 1) {
-            const current = client.categories[i];
-            const items = commands2(current);
-            embed.addField(`**${current.toUpperCase()} [${items.length}]**`, ` ${items.join("  ,  ")}\nㅤ`);
-        }
-
-        embed.addFields(
+       embed.addFields(
             { name: 'Tips', value: `${randtips}` },
             { name: 'Links', value: '> <:topgg:987043034871001228> [Top.GG](https://top.gg/bot/905198577150738482) \n> <:discord:987043173413031936> [Invitacion](https://dsc.gg/prite)' }
         )

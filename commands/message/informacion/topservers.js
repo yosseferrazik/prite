@@ -20,6 +20,8 @@ module.exports = {
         const embed = new MessageEmbed()
             .setTitle('Top 10 servidores')
             .setDescription(description)
+            .setFooter({ text: `En ${client.guilds.cache.size} servidores` })
+            .setColor('RANDOM')
 
         message.channel.send({ embeds: [embed] })
 

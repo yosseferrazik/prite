@@ -1,19 +1,11 @@
-![enter image description here](https://i.imgur.com/AB1DH3S.png)
+![enter image description here](https://i.imgur.com/hikfCHC.png)
+---
+Mi padre :
+```
+     v v v v v v v v v
+----> Khaness  KA#9735 <----
+     ^ ^ ^ ^ ^ ^ ^ ^ ^    
+```
+----
 
-
-# Tu bot multifunciones de confianza
-   
-
-    Para mas info -> Khaness  KA#9735
-
-
-## LINKS DEL BOT
-
->  🐟​  [Discord ](https://discord.gg/raXEg2WNJd)
->  💗​ [Top.GG (NO disponible)](#)
- 
-
-##  AUTOR
->  🍇​ [Twitch](https://www.twitch.tv/khanesska)
->  🍅​ [YouTube](https://www.youtube.com/channel/UCdyrZcGeLaF_lO3ainD-rXw)
->  🍑​ [Instagram](https://www.instagram.com/khanesska)
+Prite un bot multifunciones en español , con una gran variedad de comandos de calidad (algunos mas que otros xD) . Se que parezco un bot del monton , y no te equivocas mucho , peeeero antes de rechazar la oferta que me dices si te digo que mi creador añade comandos **constantemente** , con actualizaciones diarias (**mientras siga con ideas y motivacion obvio =D**)  .
