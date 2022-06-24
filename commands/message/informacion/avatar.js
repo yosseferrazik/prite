@@ -1,5 +1,4 @@
 const { Client, Message, MessageEmbed, discord } = require("discord.js")
-
 module.exports = {
     name: "avatar",
     description: "Te proporciona tu foto de perfil o la del usuario que menciones",
@@ -17,7 +16,7 @@ module.exports = {
             .setImage(`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=256`);
 
 
-        message.channel.send({ embeds: [avatarEmbed] });
+        message.channel.send({ embeds: [avatarEmbed] })
 
     }
 }
