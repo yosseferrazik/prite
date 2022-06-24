@@ -1,7 +1,7 @@
 /************{ VARIABLES DISCORD }******************/
 
 const config = require(`./settings/config.json`);
-const { Client, Intents, Collection } = require('discord.js');
+const { Client, Intents, Collection } = require('discord.js'); 
 const discord = require('discord.js')
 const client = new Client({
     messageCacheLifetime: 60,
