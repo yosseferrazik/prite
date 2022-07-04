@@ -8,6 +8,7 @@ module.exports = {
     syntax: "dm <mencion> <mensaje>",
     permissions: ["ADMINISTRATOR"], 
     cooldown: 5,
+    owner:true,
     run: async (client, message, args) => {
         
       message.delete();
