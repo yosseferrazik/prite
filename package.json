@@ -1,5 +1,5 @@
 {
-  "name": "Prite",
+  "name": "prite",
   "version": "1.0.0",
   "main": "index.js",
   "author": "KhanessKA",
@@ -29,7 +29,6 @@
     "moment-timezone": "^0.5.33",
     "mongoose": "^6.1.4",
     "ms": "^2.1.3",
-    "node": "^16.13.1",
     "node-fetch": "^2.6.7",
     "node-superfetch": "^0.2.3",
     "opusscript": "^0.0.8",
@@ -40,6 +39,7 @@
     "twemoji-parser": "^14.0.0"
   },
   "devDependencies": {
+    "node": "^16.6.0",
     "nodemon": "^2.0.12"
   },
   "engines": {
