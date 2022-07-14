@@ -21,7 +21,7 @@ module.exports = {
 
 
         const commands = (category) => {
-            return client.commands.filter((cmd) => cmd.category === category).map((cmd) => `> **${config.prefix}${cmd.syntax}** : ${cmd.description} \n`);
+            return client.commands.filter((cmd) => cmd.category === category).map((cmd) => `> \`${config.prefix}${cmd.syntax}\` : ${cmd.description} \n`);
         };
         const commands2 = (category) => {
             return client.commands.filter((cmd) => cmd.category === category).map((cmd) => `${cmd.name}`);
